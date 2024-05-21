@@ -1,0 +1,14 @@
+{
+  "general": {
+    "hello": "hello",
+    "nineMonets": "Even 9 monets are winnable",
+    "and": "AND",
+    "instruction": "Video instruction",
+    "monets" : "Monets",
+    "part" : "PART OF",
+    "jackpot" : "FROM JACKPOT"
+  },
+  "home": {
+    "title": "Home"
+  }
+}

@@ -1,0 +1,10 @@
+<div class="cards-wrapper" [ngStyle]="{
+  'background': cardData.background
+}">
+  <ng-content></ng-content>
+  <div class="icons-wrapper">
+    <img *ngFor="let i of [].constructor(cardData.coinCount + cardData.emptyCoinCount); let index = index"
+      [src]="index < cardData.coinCount ? cardData.coinPath : cardData.emptyCoinPath" />
+  </div>
+</div>
+    

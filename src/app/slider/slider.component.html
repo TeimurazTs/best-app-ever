@@ -1,0 +1,16 @@
+<div class="slider">
+  <button mat-icon-button (click)="slideLeft()">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <div class="card-container" [@slide]="currentIndex">
+    <mat-card *ngFor="let card of cardList; let i = index">
+      @if (currentIndex === i || currentIndexPlus === i ) {
+        <app-slide [name]="card.name" [link]="card.link" [path]="card.path"></app-slide>
+      }
+    </mat-card>
+  </div>
+  <button mat-icon-button (click)="slideRight()">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+
+</div>

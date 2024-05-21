@@ -1,0 +1,13 @@
+.slider {
+  display: flex;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.mat-card {
+  flex: 0 0 auto;
+}

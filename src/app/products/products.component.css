@@ -1,0 +1,41 @@
+.main-wrapper {
+  background: linear-gradient(
+    182.17deg,
+    rgba(101, 109, 149, 0.25) 2.11%,
+    rgba(20, 23, 41, 0.25) 98.18%
+  );
+  padding-bottom: 50px;
+  border-radius: 16px;
+  width: 800px;
+}
+
+.products-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px 16px 0 0;
+}
+
+.products-wrapper > *:not(:first-child) {
+  border-left: 2px solid;
+  border-image: linear-gradient(
+      180deg,
+      rgba(59, 65, 82, 0.75) 0%,
+      rgba(29, 33, 45, 0.75) 100%
+    )
+    1;
+}
+
+.products-wrapper > *:first-child {
+  border-radius: 16px 0 0 0;
+}
+
+.first-item{
+  border-radius: 16px 0 0 0;
+}
+
+/* .first-item{
+  border-radius: 16px 0 0 0 ;
+  background-color: rgb(157, 98, 22);
+} */

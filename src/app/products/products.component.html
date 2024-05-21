@@ -1,0 +1,15 @@
+<div class="main-wrapper">
+  <div class="products-wrapper">
+    @for( product of products; track product.id) {
+      <app-product-type  style="width: 100%;"
+      
+      [id]="product.id"
+                        [imagePath]="product.imagePath"
+                        [title]="product.title"
+                        [productType]="product.productType"
+                        (click)="onProductClick(product.productType, product.progress)"
+      ></app-product-type>
+    }
+  </div>
+  <app-product-progress [progress]="progress()"></app-product-progress>
+</div>

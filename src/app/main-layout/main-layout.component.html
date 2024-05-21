@@ -1,0 +1,109 @@
+<div>
+  <main>
+    <img
+      class="everyday-image"
+      ngSrc="/assets/images/koveldge.png"
+      alt="data"
+      height="62"
+      width="418"
+    />
+    <div class="winning-coins-wrapper trapezium">
+      <p class="margin-bottom-8px noto-sans-georgian">
+        15 000<span>&#8382;</span> {{ "general.and" | translate }} 150 000
+        FREESPINS
+      </p>
+      <hr class="margin-bottom-8px divisor" />
+      <div class="j-coins">
+        <img ngSrc="/assets/svgs/J.svg" width="50" height="35" alt="" />
+        <p class="winnable-coins">{{ "general.nineMonets" | translate }}</p>
+      </div>
+    </div>
+    <div class="video-instruction-wrapper" (click)="showVideo()">
+      <img ngSrc="/assets/svgs/play.svg" width="20" height="20" alt="" />
+      <p>{{ "general.instruction" | translate }}</p>
+    </div>
+    <div class="jackpot-text-wrapper noto-sans-georgian">
+      <p>9 {{"general.monets" | translate}} </p>
+      <img
+        class="eqaulity-symbol"
+        ngSrc="/assets/svgs/equals.svg"
+        width="40"
+        height="40"
+        alt=""
+      />
+      <p>
+        {{"general.part" | translate}}  <span style="color: green">4 800 000</span> FREESPINS  {{"general.jackpot" | translate}}  
+      </p>
+    </div>
+    <div class="prize-cards-wrapper">
+      <app-prize-card *ngFor="let cardData of prizeCards" [cardData]="cardData">
+        <div>
+          <div *ngIf="cardData.icon; else content">
+            <div class="head big-card-head">
+              <img
+                width="115px"
+                height="50px"
+                [src]="cardData.icon"
+                alt="car-icon"
+              />
+              <p>დარჩენილია <span class="green-text">1</span>/1</p>
+            </div>
+            <p
+              [class.big-card-text]="cardData.icon"
+              [class.small-card-text]="!cardData.icon"
+            >
+              {{ cardData.text }}
+            </p>
+            <div
+              style="
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 25px;
+              "
+            >
+              <img [src]="cardData.imagePath" alt="" />
+            </div>
+          </div>
+          <ng-template #content>
+            <div
+              class="head small-card-head"
+              [class.margin-8]="!cardData.hiddenCredentials"
+              [class.margin-16]="cardData.hiddenCredentials"
+            >
+              <p
+                [class.big-card-text]="cardData.icon"
+                [class.small-card-text]="!cardData.icon"
+              >
+                {{ cardData.text }}
+              </p>
+              <p *ngIf="cardData.hiddenCredentials; else hide">
+                დარჩენილია <span class="green-text">145</span>/200
+              </p>
+              <ng-template #hide>
+                <div class="hiddenCredentials">
+                  <img src="../../assets/images/person.png" alt="" />
+                  <p>t*******n</p>
+                </div>
+              </ng-template>
+            </div>
+          </ng-template>
+          <img [src]="cardData.prizeAmount" alt="" />
+        </div>
+      </app-prize-card>
+    </div>
+    <div class="products">
+      <h1 class="collect">
+        ᲓᲐᲐᲒᲠᲝᲕᲔ ᲑᲝᲜᲣᲡ ᲠᲐᲣᲜᲓᲔᲑᲘ <span class="green-text bold">ᲣᲚᲘᲛᲘᲢᲝᲓ</span>
+      </h1>
+      <app-products></app-products>
+    </div>
+    <div class="play">
+      <app-red-button [text]="'ᲘᲗᲐᲛᲐᲨᲔ'"></app-red-button>
+    </div>
+    <div class="slider">
+      <app-slider></app-slider>
+    </div>
+  </main>
+</div>

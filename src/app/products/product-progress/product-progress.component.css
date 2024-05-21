@@ -1,0 +1,59 @@
+.progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+mat-icon {
+  font-size: 24px;
+  color: #686868;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d313e;
+}
+
+mat-icon.active {
+  padding: 20px;
+  color: #09ff00;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #65d462 0%, #00a83c 100%);
+}
+
+.line {
+  height: 2px;
+  background-color: #ccc;
+  flex-grow: 1;
+}
+
+.line.active {
+  background: linear-gradient(270deg, #00a83c -12.79%, #8cf901 100%);
+}
+
+.green-line {
+  height: 24px;
+  background: linear-gradient(270deg, #00a83c -12.79%, #8cf901 100%);
+  width: 20px;
+}
+
+.grey-line {
+  height: 24px;
+  background-color: #2d313e;
+  width: 20px;
+}
+
+.progress-bar {
+  display: none;
+}

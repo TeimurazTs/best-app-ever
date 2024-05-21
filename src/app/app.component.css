@@ -1,0 +1,17 @@
+.page-layout-background {
+  background-image: url("/assets/images/BG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.main-container {
+  max-width: 1920px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+

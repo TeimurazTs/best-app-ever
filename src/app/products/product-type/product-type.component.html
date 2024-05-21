@@ -1,0 +1,10 @@
+<div
+  class="image-title-wrapper"
+  [ngClass]="{ 'background-color-red': isSelected() }"
+  [ngClass]="{ 'first-item': id == 1 }"
+>
+  <img class="dark" [ngClass]="{ 'brighted': isSelected() }" [ngSrc]="imagePath" width="40" height="40" alt=""/>
+  <p class="slot-title" [ngClass]="{ 'whitened': isSelected() }">
+    {{ title }}
+  </p>
+</div>

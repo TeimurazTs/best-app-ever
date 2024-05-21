@@ -1,0 +1,36 @@
+.background-color-red {
+  background: linear-gradient(
+      138.31deg,
+      rgba(255, 255, 255, 0.05) 5.55%,
+      rgba(255, 255, 255, 0) 96.58%
+    ),
+    linear-gradient(183.03deg, #f70628 9.73%, #8c0014 112.1%);
+}
+
+.image-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.image-title-wrapper {
+  padding: 30px 18px;
+}
+
+.slot-title{
+  font-size: 15px;
+  color: rgba(221, 221, 228, 0.5);
+}
+
+.dark {
+  filter: grayscale(100%);
+}
+
+.brighted {
+  filter: brightness(1);
+}
+
+.whitened{
+  color: white;
+}

@@ -1,0 +1,11 @@
+.red-button{
+    background-color: rgba(247, 6, 40, 1);
+    padding: 20px 55px;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    
+}

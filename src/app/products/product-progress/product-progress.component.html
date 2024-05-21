@@ -1,0 +1,13 @@
+<div class="progress-bar-container" (click)="toggleTooltip()">
+  <mat-progress-bar class="progress-bar" mode="determinate" [value]="progress"></mat-progress-bar>
+  <div #tooltip="matTooltip" matTooltip="გათამაშებული ყოველი 1000 ლარი უდრის ერთ ბონუს რაუნდს" class="icons-container">
+    <div class="grey-line" [ngClass]="{'green-line': 0 < progress}"></div>
+    <div *ngFor="let check of checks" class="icon-wrapper">
+      <mat-icon [ngClass]="{'active': check <= progress}">
+        check_circle
+      </mat-icon>
+      <div [ngClass]="{'green-line': check <= progress, 'grey-line': check >= progress }"></div>
+      <div *ngIf="check < checks.length" class="line" [ngClass]="{'active': check < progress}"></div>
+    </div>
+  </div>
+</div>
