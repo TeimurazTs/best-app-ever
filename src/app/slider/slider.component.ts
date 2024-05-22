@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import {MatIcon, MatIconModule} from '@angular/material/icon';
-import {MatButtonModule, MatIconButton} from '@angular/material/button';
-import {MatCard, MatCardModule} from '@angular/material/card';
-import { SlideComponent } from "./slide/slide.component";
-import { trigger, transition, style, animate } from '@angular/animations';
-import {NgForOf} from "@angular/common";
+import {Component} from '@angular/core';
+import {MatIcon} from '@angular/material/icon';
+import {MatIconButton} from '@angular/material/button';
+import {MatCard} from '@angular/material/card';
+import {SlideComponent } from "./slide/slide.component";
+import {trigger, transition, style, animate } from '@angular/animations';
+import {NgClass, NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-slider',
@@ -14,7 +14,8 @@ import {NgForOf} from "@angular/common";
     MatIcon,
     MatIconButton,
     SlideComponent,
-    NgForOf
+    NgForOf,
+    NgClass
   ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css',
@@ -31,14 +32,17 @@ import {NgForOf} from "@angular/common";
   ]
 })
   export class SliderComponent {
-  currentIndex = 0; // Track the index of the currently displayed card
+  currentIndex = 0;
   currentIndexPlus: number = 1;
   public cardList: any = [
-    {name: 'სამოთხე', path: '/assets/images/redcars.jpg', link: 'https://wwww.facebook.com'},
-    {name: 'ჯოჯოხეთი', path: '/assets/images/redcars.jpg', link: 'https://wwww.facebook.com'},
-    {name: 'პურგატორია', path: '/assets/images/redcars.jpg', link: 'https://wwww.facebook.com'},
-    {name: 'ზვანი', path: '/assets/images/redcars.jpg', link: 'https://wwww.facebook.com'},
-    {name: 'გლადნი', path: '/assets/images/redcars.jpg', link: 'https://wwww.facebook.com'}
+    {path: '/assets/images/slidergames.png', link: 'https://wwww.facebook.com'},
+    {path: '/assets/images/slidercar.png', link: 'https://wwww.facebook.com'},
+    {path: '/assets/images/slidergames.png', link: 'https://wwww.facebook.com'},
+    {path: '/assets/images/slidercar.png', link: 'https://wwww.facebook.com'},
+    {path: '/assets/images/slidergames.png', link: 'https://wwww.facebook.com'},
+    {path: '/assets/images/slidercar.png', link: 'https://wwww.facebook.com'},
+    {path: '/assets/images/slidergames.png', link: 'https://wwww.facebook.com'},
+    {path: '/assets/images/slidercar.png', link: 'https://wwww.facebook.com'}
   ]
   slideLeft() {
     if (this.currentIndex > 0) {
@@ -48,8 +52,7 @@ import {NgForOf} from "@angular/common";
   }
 
   slideRight() {
-    // Assuming you have an array of cards 'cardList'
-    if (this.currentIndex < this.cardList.length - 1) {
+    if (this.currentIndex < this.cardList.length - 2) {
       this.currentIndex++;
       this.currentIndexPlus++
     }

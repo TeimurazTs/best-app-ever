@@ -1,16 +1,18 @@
 <div class="slider">
   <button mat-icon-button (click)="slideLeft()">
-    <mat-icon>chevron_left</mat-icon>
+    <mat-icon style="color: white;">chevron_left</mat-icon>
   </button>
-  <div class="card-container" [@slide]="currentIndex">
-    <mat-card *ngFor="let card of cardList; let i = index">
+  <div class="mat-card-wrapper">
+    <mat-card style="background-color: transparent !important;"  [@slide]="currentIndex" *ngFor="let card of cardList; let i = index">
       @if (currentIndex === i || currentIndexPlus === i ) {
-        <app-slide [name]="card.name" [link]="card.link" [path]="card.path"></app-slide>
+      <app-slide [ngClass]="{'margin-right-10px': currentIndex === i}" [link]="card.link" [path]="card.path"></app-slide>
+      <div [ngClass]="{'margin-right-10px': currentIndex === i}" class="learn-more-wrapper">
+        <button class="learn-more-button">გაიგე მეტი</button>
+      </div>
       }
     </mat-card>
   </div>
   <button mat-icon-button (click)="slideRight()">
-    <mat-icon>chevron_right</mat-icon>
+    <mat-icon style="color: white;">chevron_right</mat-icon>
   </button>
-
 </div>

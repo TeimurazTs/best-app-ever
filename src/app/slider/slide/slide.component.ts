@@ -11,7 +11,6 @@ import {NgStyle} from "@angular/common";
   styleUrl: './slide.component.css'
 })
 export class SlideComponent {
-  @Input() name!: string;
   @Input() link!: string;
   @Input() path!: string;
 }
